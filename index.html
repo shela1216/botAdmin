@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>機器人客製工具</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css?v1.0.7">
+</head>
+
+<body>
+    <div id="main" v-cloak>
+        <section>
+            <div class="container-table100" id="content">
+                <div class="block-heading">
+                    <h2>客製關鍵字工具</h2>
+                    <p>此簽到系統僅提供本人簽到，請核對底下Line資料是否為本人所有，初次簽到請設定驗證碼，為未來修改簽到驗證用</p>
+                </div>
+                <div class="wrap-table100">
+                        <div class="row">
+                            <div class="form-group col-sm-12">
+                                <label for="keyword">關鍵字</label>
+                                <input id="keyword" type="text" class="form-control" placeholder="請輸入學習關鍵字"
+                                    v-model="keyword" aria-label="Card Holder" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="form-group col-sm-12">
+                                    <label for="learncontent">請輸入學習內容</label>
+                                    <textarea class="form-control" id="learncontent" rows="3" v-model="keyword" aria-label="Card Holder" aria-describedby="basic-addon1"></textarea>
+
+                                </div>
+                            <div class="form-group col-sm-12" >
+                                <div  class="btn btn-primary btn-block" >送出</div>
+                            </div>
+                        </div>
+                </div>
+                <div class="wrap-table100">
+                    <div class="table100">
+                        <table>
+                            <thead>
+                                <tr class="table100-head">
+                                    <th class="column1">Date</th>
+                                    <th class="column2">Order ID</th>
+                                    <th class="column3">Name</th>
+                                    <th class="column4">Price</th>
+                                    <th class="column5">Quantity</th>
+                                    <th class="column6">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="column1">2017-09-29 01:22</td>
+                                    <td class="column2">200398</td>
+                                    <td class="column3">iPhone X 64Gb Grey</td>
+                                    <td class="column4">$999.00</td>
+                                    <td class="column5">1</td>
+                                    <td class="column6">$999.00</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="copyright">Copyright © 2020 Shela All Rights Reserved. v1.0.7</div>
+            </div>
+        </section>
+
+
+    </div>
+
+
+    <script src="js/vue.min.js"></script>
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js'></script> -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.16.1-2020615181619/firebase-firestore.min.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAMFIUv7-YBxN6L6awpJlfqU1VBeqKhq4Q",
+            authDomain: "linebot-game-c33e4.firebaseapp.com",
+            databaseURL: "https://linebot-game-c33e4.firebaseio.com",
+            projectId: "linebot-game-c33e4",
+            storageBucket: "linebot-game-c33e4.appspot.com",
+            messagingSenderId: "924137983818",
+            appId: "1:924137983818:web:e3a401dc993fefd5f1bbb3",
+            measurementId: "G-89CSYTS9ZQ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        var db = firebase.firestore();
+        var url = window.location.href;
+        var params = "";
+        if (url.indexOf('?') != -1) {
+            params = "?" + url.split('?')[1].toString();
+        }
+    </script>
+    <script src="js/b64.js"></script>
+    <script src="js/index.js?v1.0.7"></script>
+</body>
+
+</html>
