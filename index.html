@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>機器人客製工具</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css?v1.0.7">
 </head>
 
@@ -19,50 +19,44 @@
                     <p>此簽到系統僅提供本人簽到，請核對底下Line資料是否為本人所有，初次簽到請設定驗證碼，為未來修改簽到驗證用</p>
                 </div>
                 <div class="wrap-table100">
-                        <div class="row">
-                            <div class="form-group col-sm-12">
-                                <label for="keyword">關鍵字</label>
-                                <input id="keyword" type="text" class="form-control" placeholder="請輸入學習關鍵字"
-                                    v-model="keyword" aria-label="Card Holder" aria-describedby="basic-addon1">
-                            </div>
-                            <div class="form-group col-sm-12">
-                                    <label for="learncontent">請輸入學習內容</label>
-                                    <textarea class="form-control" id="learncontent" rows="3" v-model="keyword" aria-label="Card Holder" aria-describedby="basic-addon1"></textarea>
-
-                                </div>
-                            <div class="form-group col-sm-12" >
-                                <div  class="btn btn-primary btn-block" >送出</div>
-                            </div>
-                        </div>
-                </div>
-                <div class="wrap-table100">
+                    <div class="rightAligh"><button type="button" id="btnAdd" class="btn btn-primary"><span class="glyphicon glyphicon-plus" ></span> </button></div>
+                    
                     <div class="table100">
                         <table>
                             <thead>
                                 <tr class="table100-head">
-                                    <th class="column1">Date</th>
-                                    <th class="column2">Order ID</th>
-                                    <th class="column3">Name</th>
-                                    <th class="column4">Price</th>
-                                    <th class="column5">Quantity</th>
-                                    <th class="column6">Total</th>
+                                    <th class="column1">關鍵字</th>
+                                    <th class="column2">內容</th>
+                                    <th class="column3">修改</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="column1">2017-09-29 01:22</td>
+                                    <td class="column1"><span>2017-09-29 01:22</span>
+                                        <div>
+                                            <input type="text" class="form-control" aria-describedby="" placeholder="如要增加多組關鍵字請用 , 隔開">
+                                        </div>
+
+                                    </td>
                                     <td class="column2">200398</td>
-                                    <td class="column3">iPhone X 64Gb Grey</td>
-                                    <td class="column4">$999.00</td>
-                                    <td class="column5">1</td>
-                                    <td class="column6">$999.00</td>
+                                    <td class="column3">
+                                        <button type="button" class="btn btn-info">
+                                        <span class="glyphicon glyphicon-pencil" ></span> 
+                                      </button>
+                                      <button type="button" class="btn btn-danger">
+                                            <span class="glyphicon glyphicon-remove" ></span> 
+                                          </button>
+                                          <button type="button" class="btn btn-success">
+                                                <span class="glyphicon glyphicon-ok" ></span> 
+                                              </button>
+                                    </td>
                                 </tr>
 
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div class="copyright">Copyright © 2020 Shela All Rights Reserved. v1.0.7</div>
+                <div class="copyright col-sm-12">Copyright © 2020 Shela All Rights Reserved. v1.0.7</div>
             </div>
         </section>
 

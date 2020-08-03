@@ -28,6 +28,8 @@ a { -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-tr
 
 h1 { text-shadow: 0 0 0.3em #fff, 0 0 0.3em #fff, 0 0 0.3em #fff, 0 0 0.3em #fff, 0 0 0.3em #fff; }
 
+.rightAligh { width: 100%; text-align: right; margin: 20px 0px; }
+
 .block-heading { padding-top: 50px; margin-bottom: 40px; text-align: center; }
 .block-heading h2 { margin-bottom: 1.2rem; color: #3b99e0; font-size: 2rem; }
 .block-heading p { font-size: 14px; }
